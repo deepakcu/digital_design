@@ -46,26 +46,3 @@ end
 
 end
 endmodule
-
-//Testing reset synchronizer from a testbench
-//
-// Notes:
-module tb();
-   initial begin
-      clk <= 0; //time 0 (non-blocking)
-      forever #(`CYCLE/2) clk <= ~clk; //generate clock
-   end
- 
-   // the reset must not be removed at the posedge of clock 
-   // or anywhere near the edge of the clock. This would
-   // cause metastability. 
-   initial begin
-      arst_in_n <= 0;
-   end
-
-endmodule
-
-
-
-
-
