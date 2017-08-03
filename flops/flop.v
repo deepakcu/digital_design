@@ -1,5 +1,5 @@
 // Model a simple flip flop
-//
+// Output follows input on clock edge
 module flop(
    input clk,
    input din,
