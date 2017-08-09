@@ -16,7 +16,7 @@
 module pulse_generator(
    input clk,
    input en,
-   output reg pulse_out
+   output pulse_out
 );
 
 reg q;
